@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Under Construction - Salama Laundry</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body, html {
+            height: 100%;
+            width: 100%;
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #e6f7ff; /* soft laundry blue */
+            position: relative;
+            overflow: hidden;
+        }
+
+        .background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url("lau1.jpg") no-repeat center center/cover;
+            filter: blur(5px) brightness(0.9); /* Keep colors fresh, not dark */
+            z-index: -1;
+        }
+
+        .message {
+            z-index: 1;
+            background: rgba(255, 255, 255, 0.3);
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(255,255,255,0.5);
+            padding: 40px 50px;
+            border-radius: 20px;
+            color: #003366; /* Deep laundry blue text */
+            text-align: center;
+            max-width: 400px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+            animation: fadeIn 2s ease forwards;
+            opacity: 0;
+        }
+
+        .message h1 {
+            font-size: 2.3em;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+
+        .message p {
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+
+        @keyframes fadeIn {
+            from {
+                transform: translateY(30px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .message {
+                padding: 30px 20px;
+                border-radius: 15px;
+            }
+
+            .message h1 {
+                font-size: 2em;
+            }
+
+            .message p {
+                font-size: 1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="background"></div>
+    <div class="message">
+        <h1>We're Under Construction</h1>
+        <p>Our website will be live soon. Stay tuned!</p>
+    </div>
+</body>
+</html>
